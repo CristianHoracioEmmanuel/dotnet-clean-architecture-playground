@@ -1,8 +1,15 @@
+using Application.Reservations;
+using Application.Reservations.CreateReservation;
+using Infrastructure.Reservations;
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddSingleton<IReservationRepository, InMemoryReservationRepository>();
+builder.Services.AddScoped<CreateReservationHandler>();
 
 var app = builder.Build();
 

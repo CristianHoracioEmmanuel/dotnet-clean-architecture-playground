@@ -39,3 +39,5 @@ C:\Users\Cris\Source\dotnet-clean-architecture-playground\src\Api\obj\Debug\net9
 C:\Users\Cris\Source\dotnet-clean-architecture-playground\src\Api\obj\Debug\net9.0\Api.pdb
 C:\Users\Cris\Source\dotnet-clean-architecture-playground\src\Api\obj\Debug\net9.0\Api.genruntimeconfig.cache
 C:\Users\Cris\Source\dotnet-clean-architecture-playground\src\Api\obj\Debug\net9.0\ref\Api.dll
+C:\Users\Cris\Source\dotnet-clean-architecture-playground\src\Api\bin\Debug\net9.0\Infrastructure.dll
+C:\Users\Cris\Source\dotnet-clean-architecture-playground\src\Api\bin\Debug\net9.0\Infrastructure.pdb

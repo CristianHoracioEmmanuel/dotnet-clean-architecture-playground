@@ -1,21 +1,24 @@
 # Clean Architecture Playground (.NET 8)
 
-Technical playground to practice **Clean Architecture**, CQRS and backend best practices using **.NET 8**.
+Backend-focused playground to practice **Clean Architecture**, **CQRS-style use cases**, and API design in **.NET 8**.
 
-## Purpose
-This repository is intended to demonstrate:
-- Clean Architecture principles
-- Separation of concerns
-- Backend-focused system design
-- API-first development
+## Tech stack
+- .NET 8 / ASP.NET Core Web API
+- Swagger (Swashbuckle)
+- Layered architecture: Api / Application / Domain / Infrastructure
 
-## Structure
-- `src/Api` – ASP.NET Core Web API
-- `src/Application` – Use cases and orchestration
-- `src/Domain` – Business entities and rules
-- `src/Infrastructure` – Persistence and integrations
+## Architecture
+Dependency rule:
+
+Api → Application → Domain  
+Infrastructure → (Application, Domain)
+
+- **Domain**: entities + business rules (no frameworks)
+- **Application**: use cases + orchestration
+- **Infrastructure**: persistence/integrations (placeholder for future)
+- **Api**: controllers + HTTP boundary
 
 ## Run locally
 ```bash
-dotnet build
-dotnet run --project src/Api
+dotnet restore
+dotnet run --project src/Api/Api.csproj
