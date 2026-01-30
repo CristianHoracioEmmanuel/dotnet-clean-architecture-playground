@@ -5,7 +5,10 @@ using Application.Reservations.CreateReservation.Command;
 using Application.Common.Behaviors;
 using FluentValidation;
 using MediatR;
-
+using Infrastructure.Persistence;
+using Infrastructure.Reservations;
+using Microsoft.EntityFrameworkCore;
+using Application.Reservations;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -23,7 +26,12 @@ builder.Services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBeh
 
 
 
-builder.Services.AddSingleton<IReservationRepository, InMemoryReservationRepository>();
+//builder.Services.AddSingleton<IReservationRepository, InMemoryReservationRepository>();
+builder.Services.AddDbContext<ApplicationDbContext>(opt =>
+    opt.UseSqlite("Data Source=app.db"));
+
+builder.Services.AddScoped<IReservationRepository, EfReservationRepository>();
+
 builder.Services.AddScoped<CreateReservationHandler>();
 
 var app = builder.Build();
