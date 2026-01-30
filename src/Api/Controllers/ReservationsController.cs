@@ -1,5 +1,6 @@
-using Application.Reservations.CreateReservation;
 using Application.Reservations;
+using Application.Reservations.CreateReservation.Command;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Api.Controllers;
@@ -8,22 +9,22 @@ namespace Api.Controllers;
 [Route("api/[controller]")]
 public class ReservationsController : ControllerBase
 {
-    private readonly CreateReservationHandler _create;
+    private readonly IMediator _mediator;
     private readonly IReservationRepository _repo;
 
-    public ReservationsController(CreateReservationHandler create, IReservationRepository repo)
+    public ReservationsController(IMediator mediator, IReservationRepository repo)
     {
-        _create = create;
+        _mediator = mediator;
         _repo = repo;
     }
 
     [HttpPost]
-    public async Task<ActionResult<CreateReservationResponse>> Create(
-        [FromBody] CreateReservationRequest request,
+    public async Task<ActionResult<Guid>> Create(
+        [FromBody] CreateReservationCommand command,
         CancellationToken ct)
     {
-        var result = await _create.HandleAsync(request, ct);
-        return Ok(result);
+        var id = await _mediator.Send(command, ct);
+        return Ok(id);
     }
 
     [HttpGet]

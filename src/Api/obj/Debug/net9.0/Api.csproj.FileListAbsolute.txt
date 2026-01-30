@@ -41,3 +41,14 @@ C:\Users\Cris\Source\dotnet-clean-architecture-playground\src\Api\obj\Debug\net9
 C:\Users\Cris\Source\dotnet-clean-architecture-playground\src\Api\obj\Debug\net9.0\ref\Api.dll
 C:\Users\Cris\Source\dotnet-clean-architecture-playground\src\Api\bin\Debug\net9.0\Infrastructure.dll
 C:\Users\Cris\Source\dotnet-clean-architecture-playground\src\Api\bin\Debug\net9.0\Infrastructure.pdb
+C:\Users\Cris\Source\dotnet-clean-architecture-playground\src\Api\bin\Debug\net9.0\MediatR.dll
+C:\Users\Cris\Source\dotnet-clean-architecture-playground\src\Api\bin\Debug\net9.0\MediatR.Contracts.dll
+C:\Users\Cris\Source\dotnet-clean-architecture-playground\src\Api\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Cris\Source\dotnet-clean-architecture-playground\src\Api\bin\Debug\net9.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Cris\Source\dotnet-clean-architecture-playground\src\Api\bin\Debug\net9.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Cris\Source\dotnet-clean-architecture-playground\src\Api\bin\Debug\net9.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Cris\Source\dotnet-clean-architecture-playground\src\Api\bin\Debug\net9.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Cris\Source\dotnet-clean-architecture-playground\src\Api\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Cris\Source\dotnet-clean-architecture-playground\src\Api\bin\Debug\net9.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Cris\Source\dotnet-clean-architecture-playground\src\Api\bin\Debug\net9.0\FluentValidation.dll
+C:\Users\Cris\Source\dotnet-clean-architecture-playground\src\Api\bin\Debug\net9.0\FluentValidation.DependencyInjectionExtensions.dll
